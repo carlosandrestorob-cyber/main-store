@@ -1,28 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro de Usuario</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #7c3aed, #581c87);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 35px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 420px;
+            box-sizing: border-box;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+       
+        label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #4b5563;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+       
+        input {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background-color: #f9fafb;
+        }
+
+      
+        input:focus {
+            outline: none;
+            border-color: #7c3aed;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+        }
+
+       
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        
+        button {
+            width: 100%;
+            background-color: #7c3aed;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #6d28d9;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
 </head>
 <body>
-    <h3>Register user form</h3>
+
     <form name="register-form" action="signup.php" method="post">
-         <label>First name</label><br>
-         <input type="text" name="fname" required ><br><br>
-         <label>Last name</label><br>
-         <input type="text" name="lname" required ><br><br>
-         <label>Identification number</label><br>
-         <input type="text" name="idnumber" required ><br><br>
-         <label>Mobile phone</label><br>
-         <input type="text" name="mphone" required ><br><br>
-         <label>E-mail</label><br>
-         <input type="text" name="email" required ><br><br>
-         <label>Password</label><br>
-         <input type="text" name="passw" required ><br><br>
-         <button>Register</button>
+        <h3>Registro de Usuario</h3>
+        
+        <div class="input-group">
+            <label>Nombres</label>
+            <input type="text" name="fname" required>
+        </div>
+        
+        <div class="input-group">
+            <label>Apellidos</label>
+            <input type="text" name="lname" required>
+        </div>
+        
+        <div class="input-group">
+            <label>Número de identificación</label>
+            <input type="text" name="idnumber" required>
+        </div>
+        
+        <div class="input-group">
+            <label>Teléfono (+57)</label>
+            <input type="tel" name="mphone" required>
+        </div>
+        
+        <div class="input-group">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" required>
+        </div>
+        
+        <div class="input-group">
+            <label>Contraseña</label>
+            <input type="password" name="passw" required>
+        </div>
+        
+        <button type="submit">Registrarse</button>
     </form>
-   
 
 </body>
 </html>

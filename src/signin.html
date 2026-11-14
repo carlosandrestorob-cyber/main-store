@@ -1,19 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main Store - Iniciar Sesión</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:linear-gradient(135deg,#4f46e5,#7c3aed);
+        }
+
+        .login-box{
+            width:400px;
+            background:white;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .login-box h1{
+            text-align:center;
+            color:#333;
+            margin-bottom:25px;
+        }
+
+        .input-group{
+            margin-bottom:20px;
+        }
+
+        .input-group label{
+            display:block;
+            margin-bottom:8px;
+            color:#555;
+            font-weight:bold;
+        }
+
+        .input-group input{
+            width:100%;
+            padding:12px;
+            border:2px solid #ddd;
+            border-radius:10px;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        .input-group input:focus{
+            border-color:#4f46e5;
+            outline:none;
+        }
+
+        .btn-login{
+            width:100%;
+            padding:12px;
+            background:#4f46e5;
+            color:white;
+            border:none;
+            border-radius:10px;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn-login:hover{
+            background:#4338ca;
+            transform:translateY(-2px);
+        }
+
+        .register{
+            margin-top:20px;
+            text-align:center;
+        }
+
+        .register a{
+            text-decoration:none;
+            color:#4f46e5;
+            font-weight:bold;
+        }
+
+        .register a:hover{
+            color:#4338ca;
+        }
+    </style>
 </head>
+
 <body>
-    <h3>log in</h3>
-    <form name="login-form" action="signin.php" method="post">
-        <label>E-mail </label><br>
-        <input type="text" required><br><br>
-        <label>password</label><br>
-        <input type="text" required><br><br>
-        <button>login</button>
-    </form>
-    
-</body>
-</html>
+
+    <div class="login-box">
+
+        <h1>Iniciar Sesión</h1>
+
+        <form action="signin.php" method="POST">
+
+            <div class="input-group">
+                <label>Correo Electrónico</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Contraseña</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button class="btn-login" type="submit">
+                Ingresar
