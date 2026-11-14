@@ -1,24 +1,82 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-    header('refresh:0;url=signin.html');
+
+if(!isset($_SESSION['user_id'])){
+    header("Location: signin.html");
     exit();
 }
-
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <center>
-            <h3>Welcome to main Store</h3>
-            <a href="logout.php">Logout</a>
-        </center>
-    
-    </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Store - Inicio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:linear-gradient(135deg,#4f46e5,#7c3aed);
+        }
+
+        .home-box{
+            width:450px;
+            background:white;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+
+        .home-box h1{
+            color:#333;
+            margin-bottom:15px;
+            font-size:28px;
+        }
+
+        .home-box p{
+            color:#666;
+            margin-bottom:30px;
+            font-size:16px;
+        }
+
+        .btn-logout{
+            display:inline-block;
+            width:100%;
+            padding:12px;
+            background:#ef4444;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            font-size:16px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn-logout:hover{
+            background:#dc2626;
+            transform:translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="home-box">
+        <h1>Welcome to Main Store</h1>
+        <p>Has iniciado sesión correctamente en el sistema.</p>
+        
+        <a href="logout.php" class="btn-logout">Cerrar Sesión</a>
+    </div>
+
+</body>
 </html>
