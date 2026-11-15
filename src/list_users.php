@@ -27,9 +27,12 @@ $res = pg_query($local_conn, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
     <body>
-        <table border = "1" align = "center">
+         <table class="table">
             <tr>
                <th>photo</th> 
                <th>First name</th>
@@ -48,7 +51,7 @@ $res = pg_query($local_conn, $sql);
                <td><?= $row['email'] ?></td>
                <td><?= $row['mobile_phone'] ?></td>
                <td><?= $row['status'] ?></td>
-               <td align="center">
+               <td> 
                      <a href="#">
                      <img src="icons/edit.png" alt="Edit user" width="20">
                       </a>
