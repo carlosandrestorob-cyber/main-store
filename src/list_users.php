@@ -17,7 +17,7 @@ $sql="
     from
         users
 ";
-$res = pg_query($local_conn, $sql);
+$res = pg_query($local_conn, $sql); 
 
 ?>
 
@@ -58,7 +58,7 @@ $res = pg_query($local_conn, $sql);
                      <a href="#">
                      <img src="icons/search.png" alt="Search user" width="20">
                      </a>
-                     <a href="#">
+                     <a href="delete_user.php?userID=<?= $row['id'] ?>">
                      <img src="icons/delete.png" alt="Delete user" width="20">
                      </a>
                 </td>
