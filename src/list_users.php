@@ -5,7 +5,7 @@ http://localhost/main-store/src/list_users.php
 */
 include('../settings/database.php');
 
-// Get data from users table
+
 $sql="
     select
         id,
@@ -43,7 +43,6 @@ $res = pg_query($local_conn, $sql);
            </tr>
            <?php while($row = pg_fetch_assoc($res)) { ?>
             <tr>
-                <!-- Here print data from database -->
                 <td>
                     <img src="<?= $row['url_photo'] ?>" width="40" alt="User photo profile">
                 </td>
@@ -52,8 +51,8 @@ $res = pg_query($local_conn, $sql);
                <td><?= $row['mobile_phone'] ?></td>
                <td><?= $row['status'] ?></td>
                <td> 
-                     <a href="#">
-                     <img src="icons/edit.png" alt="Edit user" width="20">
+                     <a href="edit_user.php?userID=<?= $row['id'] ?>">
+                    <img src="icons/edit.png" alt="Edit user" width="20">
                       </a>
                      <a href="#">
                      <img src="icons/search.png" alt="Search user" width="20">
