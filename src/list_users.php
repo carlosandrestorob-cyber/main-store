@@ -60,6 +60,9 @@ $res = pg_query($local_conn, $sql);
                      <a href="delete_user.php?userID=<?= $row['id'] ?>">
                      <img src="icons/delete.png" alt="Delete user" width="20">
                      </a>
+                     <a href="update_user_status.php?userID=<?= $row['id'] ?>">
+                     <img src="icons/status.png" alt="Update status" width="20">
+                     </a>     
                 </td>
             </tr>
             <?php } ?>
