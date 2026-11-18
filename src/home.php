@@ -6,6 +6,7 @@ if(!isset($_SESSION['user_id'])){
     exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -50,17 +51,30 @@ if(!isset($_SESSION['user_id'])){
             font-size:16px;
         }
 
-        .btn-logout{
-            display:inline-block;
+        .btn{
+            display:block;
             width:100%;
             padding:12px;
-            background:#ef4444;
+            margin-top:10px;
             color:white;
             text-decoration:none;
             border-radius:10px;
             font-size:16px;
             font-weight:bold;
             transition:0.3s;
+        }
+
+        .btn-users{
+            background:#2563eb;
+        }
+
+        .btn-users:hover{
+            background:#1d4ed8;
+            transform:translateY(-2px);
+        }
+
+        .btn-logout{
+            background:#ef4444;
         }
 
         .btn-logout:hover{
@@ -72,11 +86,19 @@ if(!isset($_SESSION['user_id'])){
 <body>
 
     <div class="home-box">
+
         <h1>Welcome to Main Store</h1>
+
         <p>Has iniciado sesión correctamente en el sistema.</p>
-        
-        <a href="logout.php" class="btn-logout">Cerrar Sesión</a>
+
+        <a href="list_users.php" class="btn btn-users">
+            List Users
+        </a>
+
+        <a href="logout.php" class="btn btn-logout">
+            Cerrar Sesión
+        </a>
+
     </div>
 
-</body>
-</html>
+</body> 

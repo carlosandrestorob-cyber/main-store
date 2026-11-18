@@ -66,6 +66,11 @@ $res = pg_query($local_conn, $sql);
                 </td>
             </tr>
             <?php } ?>
-       </table>    
+       </table>  
+         <br>
+
+         <a href="home.php" class="btn btn-primary">
+          ← Back to Menu
+         </a>
     </body>
 </html>
